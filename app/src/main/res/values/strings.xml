@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Maktab87-Quiz-android-1-Q1</string>
+    <string name="user_name">username</string>
+    <string name="password">password</string>
+    <string name="sign_up">sign Up</string>
+    <string name="login">Login</string>
+    <string name="sign_out">sign out</string>
+    <string name="place_holder">Place Holder</string>
+    <string name="checkbox">CheckBox</string>
+</resources>

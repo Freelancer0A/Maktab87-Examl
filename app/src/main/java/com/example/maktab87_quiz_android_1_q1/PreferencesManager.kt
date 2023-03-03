@@ -1,0 +1,32 @@
+package com.example.maktab87_quiz_android_1_q1
+
+import android.content.Context
+import android.content.SharedPreferences
+
+class PreferencesManager(context: Context) {
+
+    private val preferences: SharedPreferences
+    private val editor: SharedPreferences.Editor
+
+    init {
+        preferences = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
+        editor = preferences.edit()
+    }
+
+    fun isFirstRun() = preferences.getBoolean(FIRST_TIME, true)
+
+    fun setFirstRun() {
+        editor.putBoolean(FIRST_TIME, false).commit()
+        editor.commit()
+    }
+
+    fun setFirstTrue() {
+        editor.putBoolean(FIRST_TIME, true).commit()
+        editor.commit()
+    }
+
+    companion object {
+        private const val PREFERENCE_NAME = "configuration"
+        private const val FIRST_TIME = "isFirstRun"
+    }
+}
